@@ -1,19 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/global_padding"
+    android:paddingLeft="@dimen/global_padding"
+    android:paddingRight="@dimen/global_padding"
+    android:paddingTop="@dimen/global_padding"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.branimirkedacic.lv1.MainActivity">
+    tools:context="com.branimirkedacic.lv1.MainActivity"
+    >
 
+    <ImageView
+        android:id="@+id/iv_elon"
+        android:layout_width="@dimen/profile_width"
+        android:layout_height="@dimen/profile_height"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:paddingRight="@dimen/global_padding"
+        android:src="@drawable/elon" />
+
+    <ScrollView
+        android:id="@+id/scroll_id"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/profile_height"
+        android:layout_toRightOf="@+id/iv_elon">
     <TextView
+        android:id="@+id/descriptioncomma"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-</android.support.constraint.ConstraintLayout>
+        android:layout_height="@dimen/profile_height"
+        android:text="@string/elon"
+        android:layout_toRightOf="@id/iv_elon" />
+    </ScrollView>
+</RelativeLayout>
