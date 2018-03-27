@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="horizontal"
     android:paddingBottom="@dimen/global_padding"
     android:paddingLeft="@dimen/global_padding"
     android:paddingRight="@dimen/global_padding"
     android:paddingTop="@dimen/global_padding"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.branimirkedacic.lv1.MainActivity"
-    >
+    tools:context="com.branimirkedacic.lv1.MainActivity">
 
+
+    <!--Elon Musk -->
     <ImageView
         android:id="@+id/iv_elon"
         android:layout_width="@dimen/profile_width"
@@ -19,18 +20,94 @@
         android:adjustViewBounds="true"
         android:scaleType="fitXY"
         android:paddingRight="@dimen/global_padding"
-        android:src="@drawable/elon" />
+        android:src="@drawable/elon"
+        android:onClick = "imageClick"/>
 
     <ScrollView
-        android:id="@+id/scroll_id"
+        android:id="@+id/scroll_id1"
         android:layout_width="match_parent"
         android:layout_height="@dimen/profile_height"
         android:layout_toRightOf="@+id/iv_elon">
-    <TextView
-        android:id="@+id/descriptioncomma"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/profile_height"
-        android:text="@string/elon"
-        android:layout_toRightOf="@id/iv_elon" />
+        <TextView
+            android:id="@+id/elon_text"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/profile_height"
+            android:text="@string/elon"
+            android:layout_toRightOf="@id/iv_elon" />
     </ScrollView>
+
+    <!--Divider1 izmedu osoba -->
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_below="@id/iv_elon"
+        android:layout_height="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/grey"
+        />
+
+    <!--Bill Gates -->
+    <ImageView
+        android:id="@+id/iv_bill"
+        android:layout_width="@dimen/profile_width"
+        android:layout_height="@dimen/profile_height"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:paddingRight="@dimen/global_padding"
+        android:src="@drawable/bill"
+        android:layout_below="@id/divider1"/>
+
+    <ScrollView
+        android:id="@+id/scroll_id2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/profile_height"
+        android:layout_toRightOf="@+id/iv_bill"
+        android:layout_below="@id/divider1">
+        <TextView
+            android:id="@+id/bill_text"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/profile_height"
+            android:text="@string/bill"
+            android:layout_toRightOf="@id/iv_elon"
+            android:layout_below="@id/divider1"/>
+    </ScrollView>
+
+    <!--Divider2 izmedu osoba -->
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_below="@id/iv_bill"
+        android:layout_height="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/grey"
+        />
+
+    <!--Alan Turing -->
+    <ImageView
+        android:id="@+id/iv_alan"
+        android:layout_width="@dimen/profile_width"
+        android:layout_height="@dimen/profile_height"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:paddingRight="@dimen/global_padding"
+        android:src="@drawable/alan"
+        android:layout_below="@id/divider2"/>
+
+    <ScrollView
+        android:id="@+id/scroll_id3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/profile_height"
+        android:layout_toRightOf="@+id/iv_alan"
+        android:layout_below="@id/divider2">
+        <TextView
+            android:id="@+id/alan_text"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/profile_height"
+            android:text="@string/bill"
+            android:layout_toRightOf="@id/iv_alan"
+            android:layout_below="@id/divider2"/>
+    </ScrollView>
+
 </RelativeLayout>
