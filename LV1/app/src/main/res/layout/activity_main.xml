@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/global_padding"
     android:paddingRight="@dimen/global_padding"
     android:paddingTop="@dimen/global_padding"
+    android:background="@drawable/background"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.branimirkedacic.lv1.MainActivity">
 
@@ -32,7 +33,8 @@
             android:layout_width="wrap_content"
             android:layout_height="@dimen/profile_height"
             android:text="@string/elon"
-            android:layout_toRightOf="@id/iv_elon" />
+            android:layout_toRightOf="@id/iv_elon"
+            />
     </ScrollView>
 
     <!--Divider1 izmedu osoba -->
@@ -104,7 +106,7 @@
             android:id="@+id/alan_text"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/profile_height"
-            android:text="@string/bill"
+            android:text="@string/alan"
             android:layout_toRightOf="@id/iv_alan"
             android:layout_below="@id/divider2"/>
     </ScrollView>
