@@ -20,8 +20,7 @@
         android:adjustViewBounds="true"
         android:scaleType="fitXY"
         android:paddingRight="@dimen/global_padding"
-        android:src="@drawable/elon"
-        android:onClick = "imageClick"/>
+        android:src="@drawable/elon"/>
 
     <ScrollView
         android:id="@+id/scroll_id1"
